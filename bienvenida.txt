@@ -1,1 +1,33 @@
-Prueba.
+Tutorial para comenzar con Git y GitHub
+
+--------------------------------------------------------------------------------------------------------------
+SI NO TENES "GIT" INSTALADO!!!! ANTES QUE NADA TENES QUE HACER ESTO:
+--------------------------------------------------------------------------------------------------------------
+
+1. Instalar Git
+Descarga Git desde su sitio oficial:
+Windows: https://git-scm.com/download/win
+Una vez descargado, sigue las instrucciones del instalador para completar la instalación.
+
+2. Configurar Git por primera vez
+Después de instalar Git, abre la terminal (en Windows puedes usar Git Bash que viene incluido) 
+y configura tu nombre de usuario y correo electrónico globalmente (estos datos aparecerán en todos los commits que hagas):
+
+git config --global user.name "Tu Nombre"
+git config --global user.email "tuemail@ejemplo.com"
+
+Si quieres verificar que se configuró correctamente, puedes ejecutar:
+
+git config --global --list
+
+(Si no se entiende -> CHATGPT o YOUTUBE)
+
+--------------------------------------------------------------------------------------------------------------
+SI YA TENES "GIT" INSTALADO, EN EL VISUAL, IR A UNA CARPETA VACIA, ABRIR TERMINAR Y HACER ESTO:
+--------------------------------------------------------------------------------------------------------------
+
+3. Traer el repositorio tp_AyP1.git
+
+Clonar el repositorio remoto de Ajax4040. Esto descargará una copia local del repositorio en tu computadora:
+
+git clone https://github.com/Ajax4040/tp_AyP1.git
