@@ -46,8 +46,8 @@ public class Mision02_BusquedaDeMinerales extends MundoBase
         int x, y;
         for (int i = 0; i < cantidad; i++) {
             do {
-                x = (int) (Math.random() * 7); 
-                y = (int) (Math.random() * 8); 
+                x = (int) (Math.random() * 8); 
+                y = (int) (Math.random() * 9); 
             } while (!esPosicionLibre(x, y));
             agregar(new Asteroide(), x, y);
             marcarPosicionOcupada(x, y); // Marca la posición como ocupada
