@@ -6,7 +6,8 @@ public class Mision02_BusquedaDeMinerales extends MundoBase
     public Mision02_BusquedaDeMinerales()
     {
         super(8, 9, 100);
-        inicializarPosicionesOcupadas();
+        //inicializarPosicionesOcupadas(); //Este no hace falta acá, solo funciona si lo agregamos 
+        //después de cada objeto que agregamos de forma constante, como las naves enemigas.
     }
     
     private void inicializarPosicionesOcupadas(){ // Esto ya marca las posiciones predeterminadas
@@ -78,10 +79,13 @@ public class Mision02_BusquedaDeMinerales extends MundoBase
         agregar(new NaveDeAtaqueEnemiga(Direccion.ESTE), 0, 5);
         agregar(new NaveDeAtaqueEnemiga(Direccion.OESTE), 7, 3);
         agregar(new NaveDeAtaqueEnemiga(Direccion.OESTE), 7, 7);
+        
+        inicializarPosicionesOcupadas();
     }
 
     protected void generarPOIs() {
         marcarCelda(7, 0, new Color(0, 0, 200, 150));
+        inicializarPosicionesOcupadas();
     }
 
     protected void generarItems() {
