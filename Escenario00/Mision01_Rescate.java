@@ -19,10 +19,7 @@ public class Mision01_Rescate extends MundoBase
         marcarPosicionOcupada(4, 0);
         marcarPosicionOcupada(2, 1);
         marcarPosicionOcupada(4, 1);
-        
-        // Añade la posición de la base
-        marcarPosicionOcupada(0, 7);
-        
+                
         // Añade la posición del piloto perdido
         marcarPosicionOcupada(3, 1);
         
@@ -62,16 +59,12 @@ public class Mision01_Rescate extends MundoBase
         int x, y;
         for (int i = 0; i < cantidad; i++) {
             do {
-                x = (int) (Math.random() * getWidth()); 
-                y = (int) (Math.random() * getHeight()); 
+                x = (int) (Math.random() * 7); 
+                y = (int) (Math.random() * 8); 
             } while (!esPosicionLibre(x, y));
             agregar(new Asteroide(), x, y);
             marcarPosicionOcupada(x, y); // Marca la posición como ocupada
         }
-        /*
-         * getWidth y getHeight son métodos propios de Greenfoot, en este caso nos darían coordenadas
-         * random para x e y con Math.random si el espacio no está ocupado
-         */
     }
     
     protected void generarPOIs() {
@@ -92,11 +85,11 @@ public class Mision01_Rescate extends MundoBase
         generarEstrella(new Item());
     }
     
-    private void generarEstrella(Item item) {
+    private void generarEstrella(Item item) { //Esto después lo cambiamos por la estrella fugaz en si
         int x, y;
         do {
-            x = (int) (Math.random() * getWidth());
-            y = (int) (Math.random() * getHeight());
+            x = (int) (Math.random() * 7);
+            y = (int) (Math.random() * 8);
         } while (!esPosicionLibre(x, y));
         agregar(item, x, y);
         marcarPosicionOcupada(x, y);
